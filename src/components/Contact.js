@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 function Contact (props){
  const name = 'Terry Cruz'
-const online = true;
 const statonline = <span className="status-online"></span>
 const statoffline = <span className="status-offline"></span> 
 
@@ -14,8 +13,8 @@ const statoffline = <span className="status-offline"></span>
             <div>
             <span className="name">{props.name}</span>
             <div className="status">
-                <span>{online ? statonline : statoffline}</span>
-                <p className="status-text">{online ? "online" : "offline"}</p>
+                <span>{props.online ? statonline : statoffline}</span>
+                <p className="status-text">{props.online ? "online" : "offline"}</p>
             </div>
             </div>
         </div>
